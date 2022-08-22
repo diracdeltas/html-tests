@@ -1,0 +1,12 @@
+<body>
+  <div id='wwebkit'>
+  </div>
+  <div id='handlers'>
+  </div>
+  <script>
+    wwebkit.innerText = window.webkit;
+    if (window.webkit) {
+      handlers.innerText = JSON.stringify(window.webkit.messageHandlers);
+    }
+  </script>
+</body>
