@@ -3,10 +3,19 @@
   </div>
   <div id='handlers'>
   </div>
+  <div id='results'>
+  </div>
   <script>
     wwebkit.innerText = window.webkit;
-    if (window.webkit) {
-      handlers.innerText = window.webkit.messageHandlers;
+    const names = []
+    if (window.webkit && window.webkit.messageHandlers) {
+      const w = window.webkit.messageHandlers;
+      handlers.innerText = w;
+      for (let name in w) {
+        names.push(name);
+        names.push(w[name]);
+      }
+      results.innerText = JSON.stringify(names);
     }
   </script>
 </body>
