@@ -1,27 +1,10 @@
-<body>
-  <div id='wwebkit'>
-  </div>
-  <div id='handlers'>
-  </div>
-  <div id='results'>
-  </div>
-  <div id='everything'>
-  </div>
+<html><body>
+  Actual source code of this page:
+  <div id='r' style='color: red;'></div>
+  <a href="https://raw.githubusercontent.com/diracdeltas/html-tests/main/ios.html">Click to see the expected source code of this page</a>
   <script>
-    setTimeout(inspect, 1000);
-    function inspect() {
-      wwebkit.innerText = window.webkit;
-      const names = []
-      if (window.webkit && window.webkit.messageHandlers) {
-        const w = window.webkit.messageHandlers;
-        handlers.innerText = w;
-        for (let name in w) {
-          names.push(name);
-          names.push(w[name]);
-        }
-        results.innerText = JSON.stringify(names);
-      }
-      everything.innerText = new XMLSerializer().serializeToString(document);
-    }
+    setTimeout(() => {
+      r.innerText = new XMLSerializer().serializeToString(document);
+    }, 1000);
   </script>
-</body>
+</body></html>
