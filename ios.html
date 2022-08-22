@@ -5,17 +5,23 @@
   </div>
   <div id='results'>
   </div>
+  <div id='everything'>
+  </div>
   <script>
-    wwebkit.innerText = window.webkit;
-    const names = []
-    if (window.webkit && window.webkit.messageHandlers) {
-      const w = window.webkit.messageHandlers;
-      handlers.innerText = w;
-      for (let name in w) {
-        names.push(name);
-        names.push(w[name]);
+    setTimeout(inspect, 1000);
+    function inspect() {
+      wwebkit.innerText = window.webkit;
+      const names = []
+      if (window.webkit && window.webkit.messageHandlers) {
+        const w = window.webkit.messageHandlers;
+        handlers.innerText = w;
+        for (let name in w) {
+          names.push(name);
+          names.push(w[name]);
+        }
+        results.innerText = JSON.stringify(names);
       }
-      results.innerText = JSON.stringify(names);
+      everything.innerText = new XMLSerializer().serializeToString(document);
     }
   </script>
 </body>
