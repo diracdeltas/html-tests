@@ -1,0 +1,11 @@
+<body>
+  <head>
+    <script>
+      let i = 0;
+      Array.prototype.push = () => {
+        console.log('polluted', i);
+        i = i + 1;
+      };
+    </script>
+  </head>
+</body>
