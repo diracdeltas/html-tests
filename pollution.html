@@ -2,8 +2,8 @@
   <head>
     <script>
       let i = 0;
-      Array.prototype.push = () => {
-        console.log('polluted', i);
+      Array.prototype.push = (arg) => {
+        console.log('polluted', arg, i);
         i = i + 1;
       };
     </script>
