@@ -1,8 +1,9 @@
 ! name: Scientific Papers by Citations
 ! description: Prioritize scientific paper results sorted by citations
 ! public: true
-! author: YourUsername
+! author: diracdeltas
 
+$discard
 $boost=4,site=scholar.google.com
 $boost=3,site=semanticscholar.org
 $boost=3,site=researchgate.net
