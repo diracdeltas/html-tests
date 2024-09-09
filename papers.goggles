@@ -8,6 +8,7 @@ $boost=4,site=scholar.google.com
 $boost=3,site=semanticscholar.org
 $boost=3,site=researchgate.net
 $boost=2,site=sciencedirect.com
-$boost=2,site=pubmed.ncbi.nlm.nih.gov
+$boost=2,site=ncbi.nlm.nih.gov
+$boost=2,site=onlinelibrary.wiley.com
 
-/citations|cited by|references/i$boost=2
+/citations|cited by/i$boost=2
